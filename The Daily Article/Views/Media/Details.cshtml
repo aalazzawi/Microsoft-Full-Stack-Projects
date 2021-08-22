@@ -1,0 +1,37 @@
+﻿@model TheDailyArticle.Models.Media
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/_ViewStart.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Media</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Photos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Photos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhotoDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhotoDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ArticlesId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ArticlesId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
