@@ -1,0 +1,49 @@
+﻿@model BlindDating.Models.MailMessage
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/_ViewImports.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MailMessage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MessageTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MessageText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsRead)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsRead)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FromProfile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FromProfile.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToProfile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToProfile.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
